@@ -1,0 +1,3 @@
+[submodule "module-C3"]
+	path = module-C3
+	url = https://github.com/hellomynameisss/module-C3.git
