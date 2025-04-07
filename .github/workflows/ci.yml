@@ -1,0 +1,16 @@
+name: CI test basique
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: cloner le dépôt
+        uses: actions/checkout@v2
+
+      - name: simuler une commande
+        run: echo "tout fonctionne"
