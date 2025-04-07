@@ -1,0 +1,147 @@
+<!--html validé-->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+<title>Accueil</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="accueil.css"> 
+
+<!--j'ai cherché sur internet le processus d'importation de nouvelles polices pour avoir + de choix de design-->
+<!--importation police du titre-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--les lignes 10 et 11 n'ont été copiées qu'une fois pour toutes les polices car inutile de les répéter-->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<!--importation police des sous-titres-->
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+<!--importation police des paragraphes-->
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    </head>
+
+
+<body>
+
+    <!--création du menu de navigation entre les 2 pages du site-->
+<nav class="menu">
+<ul>
+    <li><a href="accueil.html">Accueil</a></li>
+     <li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<!--titre h1 de la page, avec en classe la police que j'ai importé-->
+<h1 class="bebas-neue-regular">L’art peut-il résister aux robots et à l’intelligence artificielle ?</h1>
+
+<!--"moteur de recherche" juste en dessous du titre-->
+<div>
+    <label for="entreerecherche"><b>Moteur de recherche :</b></label>
+    <input type="text" id="entreerecherche" placeholder="Entrez un mot">
+    <!--bouton pour lancer la recherche, onclick déclence la fonction js rechercherMot()-->
+    <button id="boutonrecherche" onclick="rechercherMot()">Rechercher</button>
+    </div>    
+    <!--affiche du resultat apres execution de la fonction, la div est vide et le contenu s'y ajoutera en fonction du résultat-->
+    <div id="resultatrecherche"></div>
+
+<!--introduction du site juste en dessous du h1-->
+<div id="intro">
+<p class="anton-regular"> 
+Emblématique de l’évolution des relations entre art et intelligence artificielle, la controverse qui a opposé en 2018 des programmeurs d’IA, des artistes et des marchands d’art autour d’un portrait généré par un algorithme, le cas « Belamy », vient illustrer les incursions de l’IA entre ready made numérique et deepfake.
+</p>
+</div>
+
+
+<!--image principale du site liée au sujet, femme qui observe le portrait de belamy dans un musée -->
+<div class="image1">
+    <img src="belamy.jpg" alt="Femme qui regarde le portrait de Belamy" class="belamy">
+    </div>
+
+    <!--utilisation de chat gpt pour retirer les différents numéros index devenu inutiles ici-->
+    <h2 class="anton-regular">Quand l’IA rencontre l’art : qu’est-ce que le GAN-isme ?</h2>
+<p class="crimson-text-regular">En 2020, la possibilité d’une intelligence artificielle autonome demeure du domaine du mythe. 
+    Le champ de recherche de l’artificialisation de l’intelligence se matérialise, à l’heure où nous écrivons ces lignes, autour de modèles d’auto-apprentissage basés sur des données. Financements et formations en hausse accompagnent le développement de l’apprentissage supervisé de machines informatiques pour reconnaître, par exemple, des formes dans des jeux de données numériques de plus en plus abondantes. La programmation informatique de réseaux de neurones imitant le fonctionnement du cerveau humain, notamment du côté du cortex visuel, constitue un champ d’expérimentation particulièrement stratégique dans différents domaines. Ces modèles de traitement d’une information visuelle inspirés du cerveau humain sont notamment utilisés dans la reconnaissance d’images grâce à l’entraînement d’algorithmes soumis à de vastes jeux de données leur permettant de générer de bonnes réponses. L’intelligence artificielle se résume donc pour l’instant à du machine learning (ML) et du deep learning (DL), c’est-à-dire à l’apprentissage supervisé ou l’auto-apprentissage de réseaux de neurones informatiques simulant une forme de l’intellect humain. Au sein de la communauté techno-scientifique de l’apprentissage dit profond (DL), une classe de réseaux de neurones a été saluée comme résolument novatrice. Il s’agit plus précisément d’une nouvelle architecture baptisée Réseau Antagoniste Générateur (GAN) par son jeune concepteur, Ian Goodfellow, figure respectée par ses pairs.
+
+    Selon la légende, c’est autour d’une bière dans une célèbre brasserie de Montréal que le jeune étudiant en machine learning a imaginé que des réseaux de neurones puissent se faire concurrence. Le « GAN-isme » était né… si l’on se réfère à l’expression d’un autre chercheur, François Chollet. C’est en effet dans le champ de l’art que les GANs ont su inspirer une nouvelle forme de génération d’images, là où d’habitude les réseaux de neurones informatisés étaient utilisés pour identifier des images. Concrètement, les GANs utilisent deux réseaux neuronaux pour produire des images : l’un, dit « générateur » ; l’autre, dit « discriminateur ». Le « générateur » produit des images sur la base de deux jeux de données, l’un d’images véritables, l’autre d’images fausses. Il reçoit du « discriminateur » le résultat du tri que celui-ci a opéré, et lui renvoie de nouvelles images créées. Le GAN ainsi programmé est jugé satisfaisant quand le « discriminateur » a validé comme vraies toutes les images générées. Cette architecture de réseau est, d’une certaine façon, ontologiquement basée sur la création de « faux vraisemblables ». C’est ainsi que le deep learning a pu entrer dans sa phase créative et, par extension métaphorique, doter l’IA d’imagination. La génération d’images réalisée par ce biais s’est développée d’abord sous un aspect folklorique appelé GAN-Zoo, car les images ainsi créées étaient souvent drolatiques et les expérimentations nombreuses. Artistes, designers et autres créatifs se sont rués vers les GANs et leurs joutes programmées entre vrai et faux.
+    
+    Un aspect moins réjouissant du GAN-isme est le fait qu’il ouvre la porte à de nouveaux faussaires de l’art artificiel…</p> 
+
+<!--2e image pour illustrer le parallele art humain / art machine, ici image de la vraie mona lisa -->
+<div class="image2">
+<img src="monalisa.jpg" alt="Mona Lisa de Léonard de Vinci" class="vraiemona">
+</div>
+
+<!--il  y a 3 titres h2 dans le site, tous dans la même police et reprenant la structure du site source-->
+<h2 class="anton-regular">La controverse « Belamy » : une autre histoire du deepfake…</h2>
+
+<p class="crimson-text-regular">L’application des technologies d’apprentissage machine dans les champs de l’art et de la culture a donné lieu à l’équivalent visuel des infox, à savoir les deepfakes [3]. Ces créations audiovisuelles qui mixent au plus profond du code informatique images de personnalités politiques ou de stars du porno ne relèvent pas toutes d’une manœuvre délibérée de propagande assistée par IA. Elles peuvent aussi être l’œuvre d’artistes dénués d’intentions malveillantes, qui se sont simplement outillés des dernières technologies offertes par les réseaux de neurones. C’est le cas par exemple de Meat Puppet (2017), de Gene Kogan, générée via une algorithmie de type GAN (appelée Pix2Pix, plus précisément) avec une webcam et une vidéo de Donald Trump [4]. Il existe donc une face cachée de l’IA créative et de ses mésusages idéologiques, que seule une éducation au décodage critique portée par les artistes eux-mêmes peut détourner. Une scène de création réflexive pointant les limites techno-politiques de l’esthétique fake de l’IA émerge d’ailleurs en France, qu’illustre par exemple le travail de Grégory Chatonsky.
+Dans le monde des utilisateurs des réseaux de neurones antagonistes de type GAN, il existe cependant des créations autres que les deepfakes, qui viennent rouvrir la problématique de l’authenticité des œuvres ponctuant l’histoire de l’art et sa marchandisation publique. Un premier marché de l’art est apparu au xviiie siècle, quand les collections sont sorties des cabinets de curiosités et des salons de l’aristocratie pour être exposées dans des salles de vente. À cette période, la question de l’authentification de l’œuvre, rattachant le nom d’un artiste à un style pictural, est devenue centrale. Dès lors, l’art devenait avant tout une question de nom propre, comme l’exprimerait en 1917 Marcel Duchamp en signant un urinoir sous un pseudonyme et en créant de facto un nouveau genre artistique, le ready made.
+La référence à cet artiste et à son geste inaugural de l’art conceptuel a été récemment exploitée dans le petit monde de l’art algorithmique, agité par une controverse opposant une salle de vente chic et un repositoire (dépôt) de codes informatiques. Les controverses socio-techniques, suivant la théorie de l’acteur-réseau développée par Bruno Latour, Madeleine Akrich, Michel Callon [5] ou encore Antoine Hennion, constituent des situations d’observation précieuses permettant de cartographier les acteurs et les valeurs d’une innovation. C’est dans ce cadre théorique que nous allons nous intéresser à la controverse « Belamy ».
+Le 25 octobre 2018, la maison new-yorkaise de vente aux enchères Christie’s cédait pour 432 500 dollars le Portrait d’Edmond de Belamy, une œuvre générée par un réseau GAN. Exécuté dans le style européen du xixe siècle, un article consacré à cette vente le décrivait ainsi : « Le portrait dans son cadre doré représente un gentleman corpulent, peut-être français et – à en juger par sa redingote sombre et son col blanc uni – homme d’Église. L’œuvre semble inachevée : les traits du visage sont quelque peu indistincts et il y a des zones de toile vierges. Une étiquette sur le mur indique que le modèle est un homme du nom d’Edmond de Belamy, mais l’indice révélateur des origines de l’œuvre est la signature de l’artiste en bas à droite. En écriture cursive, on peut lire : min (G) max (D) Ex [log(D(x))] + Ez [log(1 - D(G(z)))] [6]. »</p>
+
+<!--3e image qui est une version machine de mona lisa-->
+<div class="image3">
+    <img src="monalisaai.webp" alt="Mona Lisa version générée par l'IA" class="monaia">
+</div>
+
+<p class="crimson-text-regular">Si Marcel Duchamp avait signé son œuvre de 1917 du nom de R. Mutt, le collectif Obvious qui a proposé cette image à Christie’s a apposé une ligne de code pour authentifier l’IA à l’origine de l’œuvre, et rendu hommage par la même occasion à l’inventeur des réseaux de neurones GAN, Goodfellow, en traduisant son patronyme en français. Mais qui est le véritable auteur de ce Portrait d’Edmond de Belamy ? Le collectif Obvious, composé de trois étudiants désireux de développer l’IA dans le domaine de la création ? Robbie Barrat, un jeune artiste chercheur en machine learning qui a, suivant les principes de l’éthique hacker, laissé à la libre disposition de tous le code source de son réseau de neurones GAN ?
+
+    La controverse prend la forme d’une suite de messages sur Twitter dans lesquels Robbie Barrat publie les captures d’écran des discussions échangées sur le repositoire de codes sources GitHub avec l’un des membres du collectif Obvious, Hugo Caselles-Dupré. Barrat soupçonne Obvious d’avoir téléchargé un réseau de neurones GAN – un DCGAN, pour être précis – qu’il avait créé et entraîné sur des données afin de réaliser le Portrait d’Edmond de Belamy.
+    
+    Cette controverse publique qui se lit sur Twitter engage des points techniques cruciaux pour l’IA créative ; elle constitue aussi un bon terrain de réflexion sur les enjeux et les limites de la rencontre entre l’intelligence artificielle (à son stade actuel) et le champ de l’art. Afin de mieux comprendre ce qui se joue ici, il importe de distinguer deux éléments clés dans les expériences d’apprentissage profond à base de réseaux de neurones : d’une part, le code, c’est-à-dire l’architecture du réseau qui a été utilisée ; d’autre part, le modèle d’apprentissage du réseau qui a été entraîné sur un jeu de données, permettant d’obtenir rapidement des résultats sans avoir à le réentraîner depuis le début du processus. Obvious, qui prétend n’avoir utilisé que le code de Barrat et non le modèle d’apprentissage, récuse toute accusation de plagiat. Le débat entre les spécialistes eux-mêmes reste tranché. Est-ce que coder l’architecture constitue le segment le plus original dans un travail de deep learning ? Certains objecteront qu’il existe pour ce faire des plates-formes de travail (frameworks) toutes prêtes, telle TensorFlow, et que l’innovation réside plutôt dans la construction du jeu de données et l’entraînement du modèle. Sous l’algorithme et le code du réseau neuronal, ce sont aussi les données qui peuvent s’avérer décisives – dans le cas présent, des tableaux du xixe siècle.
+    
+    Il faut noter que la controverse initiée par Robbie Barrat ne s’attache pas au geste de copier-coller du code, qui est monnaie courante dans la mouvance open source et dont c’est même le principe – si toutefois l’éthique hacker est respectée en mentionnant les contributeurs d’un programme informatique dont on protège, à l’inverse des lois de la propriété intellectuelle, l’ouverture à une réécriture possible. Ce que la communauté artistique travaillant avec les GANs et autres technologies d’IA regrette, c’est cette mise sur le marché somme toute assez traditionnelle de la part d’Obvious qui, sans assumer jusqu’au bout la création du premier ready made by deep learning, permet à une ancienne institution du marché de l’art de se moderniser en surfant sur la pensée magique de l’intelligence artificielle, déniant les itérations collaboratives entre artistes programmeurs pionniers.
+    
+    À travers cette vente, il s’agissait pour Christie’s de tester l’IA Art. Non sans cynisme, l’organisateur de la session donne son point de vue sur cette controverse : « C’est un portrait, après tout. Il n’a peut-être pas été peint par un homme avec une perruque poudrée, mais c’est exactement le genre d’œuvre d’art que nous vendons depuis deux cent cinquante ans. […] Dans dix ou vingt ans – qui sait ? – le sujet de discussion pourrait être l’art de la performance en réalité virtuelle, ou encore l’œuvre d’un robot Picasso. » Un certain socio-centrisme se trouve ici ratifié, puisqu’il estime que ce portrait généré par un modèle informatique auto-apprenant n’est pas fondamentalement différent des œuvres habituellement vendues par la maison Christie’s. Les conventions artistiques des collectionneurs d’art du xixe siècle sont sauves, le portrait généré par une IA est un vrai-faux tableau… dans le style même du GAN Art : des corps sans visage, des chiens aux yeux multiples… bref, des chimères.
+    
+    Cette controverse pourrait sembler n’être que l’affaire d’un club de geeks esthètes, mais elle démontre aussi combien la créativité algorithmique embarque tout un ensemble d’autres biais de la création par IA. Des biais signalés par la chercheuse Kate Crawford, par exemple, lorsqu’elle a créé à titre expérimental le dispositif ImageNet Roulette, établi sur la base de données ImageNet couramment employée pour l’entraînement d’algorithmes. Il était proposé aux utilisateurs de télécharger une photographie d’eux afin de leur faire prendre conscience des étiquetages que réalisent ces programmes de reconnaissance d’images. Catégorisations racistes, sexistes, homophobes, etc. ont ainsi été mises en évidence, démontrant que l’IA est socialement située et qu’en somme les ingénieurs à travers le monde reproduisent les stéréotypes de classe, de genre et de race dans la description des images destinées à l’apprentissage des algorithmes.
+    
+    Mais il est aussi possible d’estimer, selon le chercheur Ian Bogost, que l’œuvre ici créée est moins un portrait d’« Edmond de Belamy » que les start-ups générées à partir de cette rencontre entre IA et art. Comme l’exprime également Lev Manovich, spécialiste des nouveaux médias, à propos notamment d’Ahmed Elgammal, un chercheur entreprenant dans le domaine de l’IA créative, « aujourd’hui, ce sont plutôt les sciences informatiques et les start-ups financées par le capital-risque qui stimulent la production culturelle. Et pourtant, de toutes les formes esthétiques, les beaux-arts sont peut-être les plus compatibles avec les bouleversements technologiques – ils se nourrissent les uns et les autres de nouveauté, même s’ils brûlent vite et fort. » Et c’est bien là l’aberration écologique d’une telle économie de la création.</p>
+
+<!--3e et dernier h2-->
+<h2 class="anton-regular">Quand l’art artificiel rencontre les limites planétaires</h2>
+<p class="crimson-text-regular">Plus largement, du point de vue écologique, l’IA et notamment les GANs demeurent un paradoxe. Certains usages de ces réseaux neuronaux sont mis en valeur afin de faire économiser de la puissance de calcul ou pour pallier l’absence de données. Cependant, comme l’a souligné cette controverse, de tels réseaux mettent aussi en jeu deux éléments clés, le code de leur architecture et le jeu de données. L’intelligence artificielle, qui requiert une quantité gigantesque de données pour entraîner les modèles d’apprentissage, semble donc in fine une voie technologique bien peu propice à la sobriété numérique – sobriété pourtant nécessaire si l’on veut conserver l’espoir d’une trajectoire viable pour l’humanité et ses créations sur une planète endommagée.</p>
+
+
+<!--pour la dernirèe consigne de personnalisation de la pagae par l'utilisateur on va utiliser un formulaire -->
+
+<form id="personnalisation"><!--id du formulaire pour le javascript-->
+    <h3>Personnalisation de l'affichage</h3>
+
+<!--sélection de la police. for fait reference à l'id du champ de selection, pour améliorer l'accessibilite-->
+<label for="police">Choisir la police :</label>
+    <select id="police"> <!--id police pour récupérer la sélection en javascript-->
+        <!--ci dessous les différents polices disponibles-->
+        <option value="arial">Arial</option>
+        <option value="times New Roman">Times New Roman</option>
+        <option value="verdana">Verdana</option>
+        <option value="georgia">Georgia</option>
+</select>
+    <!--champ de couleur du texte-->
+    <label for="couleurtxt">Choisir la couleur :</label>
+    <!--la valeur par défaut (si l'utilisateur ne sélectionne pas une autre couleur) est le noir-->
+    <input type="color" id="couleurtxt" value="#000000">
+    <!--taille du texte-->
+    <label for="tailletxt">Choisir la taille :</label>
+    <!--value est la valeur par défaut, min et max les limites de taille que l'utilisateur peut choisir-->
+    <input type="number" id="tailletxt" min="10" max="50" value="16"> px
+
+<!--bouton pour appliquer les changements de style qu'a choisi l'utilisateur-->
+<!--"type=button" empeche l'envoi du formulaire pour executer la fonction javascript
+et "onclick" appelle la fonction personnalisation()-->
+    <button type="button" onclick="personnalisation()">Appliquer les changements</button>
+    </form>
+
+
+
+    <!--pour répondre à la consigne d'une liste non ordonnée d'au moins 3 élements j'ai fait une liste de réseaux sociaux du propriétaire fictif du site-->
+    <div id="listenonordonnee">
+    <p><b>Nos réseaux sociaux : </b></p>
+        <ul>
+        <li>Twitter : @iaetart</li>
+        <li>Instagram : @iaetart</li>
+        <li>Facebook : IA et art</li>
+    </ul></div>
+
+<script src="accueil.js"></script>
+</body>
+</html>

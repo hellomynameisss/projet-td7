@@ -1,0 +1,107 @@
+<!--html validé-->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title class="anton-regular">Contact</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="contact.css">
+        <!-- copié collé de l'importation des polices dans accueil.html-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <!--importation polices des sous-titres-->
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+        <!--importation polices des paragraphes-->
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    </head>
+
+<body>
+    <!--menu nav-->
+    <nav class="menu">
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+             <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </nav>
+
+    <!--titre h1 de la page-->
+    <h1>Contact</h1>
+
+    <fieldset><!--pour regrouper les éléments-->
+        <h2 class="bebas-neue-regular">Formulaire à remplir </h2>
+        <form onsubmit="return verification();"><!--formulaire de contact à remplir & appel de la fonction de vérification. Certains éléments sont facultatifs-->
+            <label for="nom">Nom : </label>
+            <input type="text" id="nom" maxlength="60">
+            <label for="prenom">Prénom : </label>
+            <input type="text" id="prenom" maxlength="60">
+            <label for="tel">Numéro de téléphone : </label>
+            <input type="tel" id="tel" name="tel">
+            <label for="password">Mot de passe : </label>
+            <input type="password" id="password">
+            <label for="email">Email : </label>
+            <input type="email" id="email" name="email">
+
+        <label>Domaine et métier :</label>
+        <select id="domaine" onchange="consignelistes()">
+            <option value="choisirDomaine">Choisissez un domaine...</option>
+            <option value="domaine1">Intelligence artificielle</option>
+            <option value="domaine2">Cybersécurité</option>
+            <option value="domaine3">Développement web</option>
+            <option value="domaine4">Data science</option>
+        </select>
+        
+        <label>Branche :</label>
+        <select id="branche">
+            <option value="choisirBranche">Choisissez une branche...</option>
+        </select>
+
+        
+
+        <label>Langage le mieux maîtrisé :</label>
+        <select id="achoisir">
+                <option value="choisirLangage">Choisir un langage...</option>
+                <optgroup label="Langage de script">
+                    <option value="python">Python</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="php">PHP</option>
+                    <option value="bash">Bash</option>
+                </optgroup>
+                <optgroup label="Langage de balisage et de style ">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="xml">XML</option>
+                    <option value="markdown">Markdown</option>
+                </optgroup>
+            </select>
+
+    <p><b>Domaines d'intérêt : </b></p>
+        <label for="domaineinteret1">
+            <input type="checkbox" id="domaineinteret1"> Apprentissage automatique (Machine learning) </label>
+    <label for="domaineinteret2">
+        <input type="checkbox" id="domaineinteret2"> Apprentissage profond (Deep learning) </label>
+    <label for="domaineinteret3">
+        <input type="checkbox" id="domaineinteret3"> Traitement du langage naturel (NLP) </label>
+    <label for="domaineinteret4">
+        <input type="checkbox" id="domaineinteret4"> Robotique </label>
+        <label for="domaineinteret5">
+        <input type="checkbox" id="domaineinteret5"> Bio-informatique </label>
+
+            
+        <label for="joindredoc">Si document à joindre : </label>
+        <input type="file" id="joindredoc" name="joindredoc">
+            <label for="Commentaires">Commentaires :</label>
+            <textarea id="Commentaires" name="Commentaires" rows = "5" cols = "25" >
+            </textarea>
+        
+    
+
+    
+            <input type="submit" value="Valider le formulaire" >
+        </form>
+    </fieldset>
+<script src="contact.js"></script>
+</body>
+</html>

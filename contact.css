@@ -1,0 +1,115 @@
+/*on reprend la mise en page de l'accueil*/
+/*CSS validé*/
+
+body {
+    font-family: "Crimson Text", 'verdana', 'arial'; 
+    background-color: #F8F3E8; /*couleur de fond*/
+    color:  #6F4C3E;/*couleur du texte*/
+    margin: 250px; /*marge autour du body pour ne pas que le site soit collé à la fenêtre*/
+    text-align: justify;/*texte justifié*/
+}
+
+/*importation des polices : embed code à copier coller de google font*/
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.crimson-text-regular {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+
+
+
+
+/*menu de navigation repris de l'accueil*/
+nav.menu ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0;
+    background-color: #6F4C3E; 
+    text-align: center; 
+    font-family: "Anton", sans-serif; 
+    position: fixed; 
+    top:0; 
+    left:0; 
+    width: 100%; 
+}
+
+nav.menu ul li {
+    display: inline; 
+    margin-right: 15px; 
+}
+
+nav.menu ul li a {
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 20px;
+    font-family: "Anton", sans-serif; 
+}
+
+nav.menu ul li a:hover { 
+    background-color: #3a2820; 
+    display: inline-block;
+}
+
+
+
+
+
+
+h1 { /* pour le h1 ici je n'ai pas repris le meme design que le h1 de accueil car la page contact reste "secondaire" dans un site, donc h1 + discret*/
+    text-align: center;
+    color: #6F4C3E;
+    font-size: 30px;
+}
+
+
+/*styles pour les éléments du formulaire*/
+fieldset {
+    width: 80%; /*largeur du champ de formulaire*/
+    margin: 20px auto; /*centrage et marge automatiqeu*/
+    padding: 50px; /*"remplissage" à l'intérieur du champ pour le confort de l'utilisateur*/
+    background-color: rgb(255, 255, 255); 
+    border: 2px solid #ccc; /*bordure grise de 2px*/
+}
+
+
+label {
+    display: block; /*affiche chaque label sur une nouvelle lignze*/
+    margin-top: 10px; /*espace au dessus des labels pour les séparer et aérer visuellement*/
+}
+
+input, select, textarea {
+    width: 100%; /*pour que tous les champs de saisie prennent toute la page*/
+    padding: 8px;
+    margin-top: 5px; /*pour décoller les champs*/
+    border: 1px solid #ccc; 
+}
+
+/*bouton de soumission du formulaire*/
+
+input[type="submit"] {
+    background-color: #6F4C3E;  /*couleur de fond*/
+    color: white;/*couleur du texte*/
+    border: none;/*enlève la bordure par défaut*/
+    padding: 10px;
+    margin-top: 10px;/*espace au dessus du bouton pour mieux le séparer visuellement*/
+    
+}
+
+input[type="submit"]:hover {
+    background-color: #3a2820; 
+    cursor: pointer; /*change curseur de la souris quand elle survole le bouton*/
+}

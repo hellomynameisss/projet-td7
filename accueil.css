@@ -1,0 +1,216 @@
+/*utilisation de chatgpt pour générer une palette de plusieurs couleurs assorties et pour me donner 
+rapidement des fonctions dont j'ai besoin (plus rapide que la documentation normale)*/
+/*CSS validé sauf 1 erreur expliquée en bas*/
+
+body {
+    font-family: 'crimson-text-regular', 'verdana', 'arial'; /*définition de la police du body + 2 polices alternatives en cas de non disponibilité*/
+    background-color: #F8F3E8; /*couleur de fond*/
+    color:  #6F4C3E;/*couleur du texte*/
+    margin: 250px; /*marge autour du body pour ne pas que le site soit collé à la fenêtre*/
+    text-align: justify;/*texte justifié*/
+}
+
+
+
+
+
+/*embed code qui était à copier coller de google font pour les polices importées. Pour les titres
+j'ai choisi des polices de la même famille pour harmoniser, et pour le body une police simple mais plus esthétique que arial*/
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif; /*avec classes pour les utiliser plus facilement*/
+    font-weight: 400;
+    font-style: normal;
+}
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.crimson-text-regular {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+
+
+
+
+/*menu de navigation */
+/*l'effet que j'ai voulu est que le menu de navigation soit assez discret mais qu'il s'agrandisse quand on passe la souris dessus pour sélectionner une page*/
+/*utilisation de chatgpt pour organiser les différentes sélecteurs de style du menu (nav.menu ul, nav.menu ul li, etc)*/
+
+/*style de la liste non ordonnée */
+nav.menu ul {
+    list-style-type: none; /*suppression des puces*/
+    padding: 0; 
+    margin: 0;/*pour que le menu soit bien collé en haut sans laisser de marge*/
+    background-color: #6F4C3E; /*couleur de fond du menu*/
+    text-align: center; /*centrer les leins de page*/
+    font-family: "Anton", sans-serif; /*police du menu*/
+    position: fixed; /*pour que le menu reste en haut de la page meme quand on defile*/
+    top:0; /*positionne le menu tout en haut de la page*/
+    left:0; /*décale le texte vers la gauche sinon il vire à droite (??)*/
+    width: 100%; /*pour que le menu occupe toute la largeur de la page*/
+}
+
+nav.menu ul li {
+    display: inline; /*pour que les éléments de lsite s'affichent horizontalement et pas verticalement*/
+    margin-right: 15px; /*pour avoir une marge entre les deux boutons*/
+}
+
+nav.menu ul li a {
+    color: white; /*couleur du texte des liens*/
+    text-decoration: none; /*pour enlever le soulignage des liens*/
+    padding: 10px 20px; /*marges pour l'esthétique*/
+    font-family: "Anton", sans-serif; 
+}
+
+nav.menu ul li a:hover { /* style du menu quand on passe la souris par dessus*/
+    background-color: #3a2820; /*la couleur devient plus foncée pour delimiter la sélection*/
+    display: inline-block;/*ligne générée par chatgpt;
+    . quand on passait la souris sur "accueil" ou "page", la sélection devenait un rectangle qui sort de la ligne du menu.
+     j'ai essayé plusieurs solutions qui ne marchaient pas ou qui réglaient le probleme en en créant un autre. pour gagner du temps j'ai
+     demandé à chatgpt de débugguer */
+}
+
+
+
+
+
+
+
+
+/*choix du style pour mettre en avant le h1*/
+h1 {
+    text-align: center; /*centrer le texte*/
+    color: #A65E49;
+    margin: 90px; /*taille et de police (ci-dessous) et marge importante pour bien mettre en avant le titre*/
+    font-size: 70px; 
+}
+
+
+/*choix du style pour mettre en avant l'introduction (qui est également mise en avant sur le site source*/
+
+#intro { 
+    font-size: 30px;
+    padding: 50px;
+    display: block;
+    margin: 50px;
+    text-align: left;
+}
+
+
+/* aide de chatgpt à certains endroits pour débugguer l'intégration des images*/
+
+.belamy { 
+    border: 2px solid #443a37;
+    box-shadow: 0 4px 8px rgba(0, 0, 1, 1);
+    width: 90%;
+    display: block; /* pour centrer l'image je la transforme d'abord en élément de bloc*/
+    margin: 50px auto; /*puis je la centre*/
+}
+
+
+.vraiemona { /* styles propre à la première image de mona donc la rotation vers la gauche et le placement à gauche  */
+    transform: rotate(-5deg); /* pour pencher les images */
+    align-items: left; /* pour aligner l'image à gauche de la page . Le valideur CSS me disait de changer le align-items en float 
+    mais en le faisant le texte n'entourait plus l'image, par manque de temps de régler ce problème j'ai préféré laisser comme ça (puisque ça fonctionne de toute façon)*/
+    
+}
+
+.vraiemona, .monaia { /* styles communs aux deux images de mona lisa*/
+    width: 20%; /* on réduit la taille de l'image par la largeur, et la hauteur s'adapte */
+    height: auto;
+    margin: 50px;
+    border-radius: 30px; /*on arrondit les bords de l'image pour que ce soit plus doux visuellement  */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  /* effet ombre utilisé plusieurs fois  */
+}
+
+.vraiemona { /* styles propre à l'image du tableau de mona lisa : rotation vers la gauche et placement à gauche  */
+    transform: rotate(-5deg); 
+    float: left;
+    
+}
+
+.monaia {   /* styles propre à l'image monaia' : rotation vers la droite et placement à droite  */
+    float: right; /*j'ai utilisé float au lieu de align items pour que le texte entoure les images*/
+    transform: rotate(5deg);
+}
+
+
+/*quand on descend dans la page les images de mona lisa apparaissent par dessus le menu,
+ce n'était pas voulu mais comme ça rend bien je n'ai pas cherché à l'enlever et ai préféré le laisser*/
+
+
+
+/* personnalisation du moteur de recherche */
+
+#entreerecherche { /*style de la zone de saisie*/
+    width: 300px; /*largeur*/
+    padding: 8px; /*épaisseur*/
+    margin-right: 10px;
+    border: 2px solid #6F4C3E; /*bordure*/
+    border-radius: 5px; /*arrondissement des bords*/
+}
+
+/* design du bouton de recherche */
+#boutonrecherche {
+    padding: 8px 15px;
+    background-color: #6F4C3E;
+    color: #E2CFC3; /*couleur texte du bouton*/
+    border: none; /*pas de bordure*/
+    border-radius: 4px;/*pour arrondir les bords*/
+}
+
+/* design du bouton de recherche quand on passe la souris dessus*/
+#boutonrecherche:hover {
+    background-color: #3a2820;
+    cursor: pointer;/*transforme le curseur de la souris*/
+}
+
+/* design du résultat affiché*/
+#resultatrecherche {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #3a2820;
+}
+
+
+
+
+/*personnalisation basique des dernieres sections du site, le bouton de personnalisation de l'utilisateur 
+et la liste non ordonnée*/
+#personnalisation {
+    color: #4a3b36;
+    margin-top:50px;
+}
+
+#listenonordonnee {
+    margin-top:50px;
+    color: #4a3b36;
+    font-size: 14px;
+    font-family: "Crimson Text";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
